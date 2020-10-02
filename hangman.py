@@ -43,9 +43,16 @@ while True:
     
     # if there's no more letters missing
     if missing == 0:
-        print('\nYou won! Hurray!')
-        break
-            
+        retry = input('\nYou have won! Do you want to play again? ')
+        if retry == 'yes':
+        
+            # Resets all parameters
+            correct = wordlist[random.randrange(len(wordlist))]
+            guessed = []
+            wrong = 0
+        else:
+            break
+        
     
     # Asks for the letter and stores it in trial
     trial = input('\nCome on, ' + username + '! Try to guess a letter: ')
@@ -70,21 +77,16 @@ while True:
                 print('____________\n|          |\n|          O\n|         _|_\n|          /\n|         /\n|_____')
             if wrong == 6:
                 print('____________\n|          |\n|          O\n|         _|_\n|          /\\ \n|         /   \\\n|_____')
-                print('\nYou failed! Try again next time!')
-                break
+                
+                retry = input('\nYou have lost! Do you want to play again? ')
+                if retry == 'yes':
+                
+                    # Resets all parameters
+                    correct = wordlist[random.randrange(len(wordlist))]
+                    guessed = []
+                    wrong = 0
+                else:
+                    break
                 
     else:
         print('\nIllegal value!')
-    
-
-
-
-
-
-
-
-
-
-
-
-
