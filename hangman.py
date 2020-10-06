@@ -43,7 +43,8 @@ while True:
     
     # if there's no more letters missing
     if missing == 0:
-        retry = input('\nYou have won! Do you want to play again? ')
+        retry = input('\nYou have won! \nDo you want to play again? ')
+        # If player wants to retry
         if retry == 'yes':
         
             # Resets all parameters
@@ -78,7 +79,8 @@ while True:
             if wrong == 6:
                 print('____________\n|          |\n|          O\n|         _|_\n|          /\\ \n|         /   \\\n|_____')
                 
-                retry = input('\nYou have lost! Do you want to play again? ')
+                retry = input('\nYou have lost! The correct word was ' + correct + '\nDo you want to play again? ')
+                # If player wants to retry
                 if retry == 'yes':
                 
                     # Resets all parameters
