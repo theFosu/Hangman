@@ -77,7 +77,7 @@ while True:
             if wrong == 5:
                 print('____________\n|          |\n|          O\n|         _|_\n|          /\n|         /\n|_____')
             if wrong == 6:
-                print('____________\n|          |\n|          O\n|         _|_\n|          /\\ \n|         /   \\\n|_____')
+                print('____________\n|          |\n|          O\n|         _|_\n|          /\\ \n|         /  \\\n|_____')
                 
                 retry = input('\nYou have lost! The correct word was ' + correct + '\nDo you want to play again? ')
                 # If player wants to retry
